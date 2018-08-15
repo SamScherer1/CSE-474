@@ -1,0 +1,1 @@
+cmd_/tmp/guest-rrswgn/Group2/p3/new_char/new_char.ko := arm-linux-gnueabihf-ld -EL -r  -T /tmp/guest-rrswgn/bb-kernel/KERNEL/scripts/module-common.lds --build-id  -o /tmp/guest-rrswgn/Group2/p3/new_char/new_char.ko /tmp/guest-rrswgn/Group2/p3/new_char/new_char.o /tmp/guest-rrswgn/Group2/p3/new_char/new_char.mod.o

@@ -1,0 +1,18 @@
+git clone https://github.com/RobertCNelson/bb-kernel.git
+cd bb-kernel
+git checkout 3.8.13-bone70 -b 3.8.13-bone70
+
+gedit version.sh
+comment out 'toolchain="gcc_linaro_gnueabihf_4_7"'
+uncomment 'toolchain="gcc_linaro_gnueabihf_4_8"'
+
+gedit tools/host_det.sh
+replace this file with the one at https://raw.githubusercontent.com/RobertCNelson/stable-kernel/master/tools/host_det.sh
+
+gedit scripts/gcc.sh
+in the function gcc_toolchain(), change the two lines starting with 'version="..."' under the 4.8 version to:
+version="archive/14.04/components/toolchain/binaries"
+
+./build_kernel.sh
+
+Go to /bb-kernel/KERNEL/include/linux/, and add the file called "compiler-gcc5.h" attached in an email.

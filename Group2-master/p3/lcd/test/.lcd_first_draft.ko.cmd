@@ -1,0 +1,1 @@
+cmd_/tmp/guest-lm66gt/Desktop/Group2/p3/lcd/test/lcd_first_draft.ko := arm-linux-gnueabihf-ld -EL -r  -T /tmp/guest-lm66gt/Desktop/bb-kernel/KERNEL/scripts/module-common.lds --build-id  -o /tmp/guest-lm66gt/Desktop/Group2/p3/lcd/test/lcd_first_draft.ko /tmp/guest-lm66gt/Desktop/Group2/p3/lcd/test/lcd_first_draft.o /tmp/guest-lm66gt/Desktop/Group2/p3/lcd/test/lcd_first_draft.mod.o

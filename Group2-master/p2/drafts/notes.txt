@@ -1,0 +1,26 @@
+Pins on display
+GPIO#	Pin# and function
+
+GND	1: 0V gnd
+SYS 5V	2: +5v supply
+GND	3: LCD drive power source(? has to do with contrast Vcc-Vee = Vo)
+69	4: RS (register select, "0": write, : busy flag, "1": write, read)
+45	5: R/W ("0": write, "1": read)
+44	6: Enable (enable)
+	
+-------- Data Bus --------
+Low order, not used in 4 bit operation
+48	7: DB0	
+49	8: DB1	
+117	9: DB2	
+115	10: DB3	
+
+High order, used in 4 (and 8?) bit operation
+27	11: DB4	
+46	12: DB5	
+47	13: DB6	
+26	14: DB7	
+
+----- Register selection -----
+RS = 0, R/W = 0 :	IR write, internal operation (writing to register to print character)
+RS= 0, R/W = 1 :	Busy flag (DB7) set to true then begin internal operation (writing text)? switch busy flag to 0 when done 				automatically

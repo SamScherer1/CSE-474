@@ -1,0 +1,1 @@
+cmd_/tmp/guest-rrswgn/Group2/p3/hello_world/hello_world.ko := arm-linux-gnueabihf-ld -EL -r  -T /tmp/guest-rrswgn/bb-kernel/KERNEL/scripts/module-common.lds --build-id  -o /tmp/guest-rrswgn/Group2/p3/hello_world/hello_world.ko /tmp/guest-rrswgn/Group2/p3/hello_world/hello_world.o /tmp/guest-rrswgn/Group2/p3/hello_world/hello_world.mod.o

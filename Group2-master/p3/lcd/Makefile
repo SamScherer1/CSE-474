@@ -1,0 +1,17 @@
+# Makefile for lcd LKM
+
+export ARCH=arm
+export CROSS_COMPILE=arm-linux-gnueabihf-
+ccflags-y := -std=gnu99
+
+obj-m += lcd.o
+
+# Kernel source directory
+KDIR =/tmp/guest-r7qw8v/bb-kernel/KERNEL
+PWD = $(shell pwd)
+
+default:
+	$(MAKE) -C $(KDIR) SUBDIRS=$(PWD) modules
+clean:
+	$(MAKE) -C $(KDIR) SUBDIRS=$(PWD) clean
+
